@@ -6,34 +6,31 @@ manage library
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 
+
 ```bash
 cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch master
+bench get-app https://github.com/Kasahun-Ab/Frappe-Library-Managment.git --branch main
 bench install-app library_manag
 ```
 
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+###  Create site 
+A site in Frappe is like a project that contains your database, configuration, and installed apps
+```bash
+cd $PATH_TO_YOUR_BENCH
+bench new-site your-site-name
+```
+### Install the App on Your Site
+ Run the following command to install the app you just pulled onto your site:
 
 ```bash
-cd apps/library_manag
-pre-commit install
+bench --site your-site-name install-app library_manag
 ```
-
-Pre-commit is configured to use the following tools for checking and formatting your code:
-
-- ruff
-- eslint
-- prettier
-- pyupgrade
-### CI
-
-This app can use GitHub Actions for CI. The following workflows are configured:
-
-- CI: Installs this app and runs unit tests on every push to `develop` branch.
-- Linters: Runs [Frappe Semgrep Rules](https://github.com/frappe/semgrep-rules) and [pip-audit](https://pypi.org/project/pip-audit/) on every pull request.
-
+### Run the server: 
+After installing the app, you can start the development server to interact with the app.
+```bash
+bench start
+```
+This will start the server, and you can access your site at  http://localhost:8000.
 
 ### License
 
