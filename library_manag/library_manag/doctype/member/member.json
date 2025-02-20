@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-17 20:12:42.286575",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "membership_id",
+  "name1",
+  "column_break_ufdb",
+  "phone",
+  "email"
+ ],
+ "fields": [
+  {
+   "fieldname": "membership_id",
+   "fieldtype": "Data",
+   "label": "Membership ID"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_ufdb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-17 20:21:59.098424",
+ "modified_by": "Administrator",
+ "module": "Library Manag",
+ "name": "Member",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

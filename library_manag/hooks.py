@@ -244,4 +244,22 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+website_route_rules = [
+    {"from_route": "/book-details/<isbn>", "to_route": "book-details"}
+]
 
+override_whitelisted_methods = {
+    "POST /api/method/library_manag.api.create_book": "library_manag.api.create_book",
+    "GET /api/method/library_manag.api.get_books": "library_manag.api.get_books",
+    "GET /api/method/library_manag.api.get_book_details": "library_manag.api.get_book_details",
+    "POST /api/method/library_manag.api.update_book": "library_manag.api.update_book",
+    "POST /api/method/library_manag.api.delete_book": "library_manag.api.delete_book",
+    "POST /api/method/library_manag.api.create_member": "library_manag.api.create_member",
+    "GET /api/method/library_manag.api.get_member": "library_manag.api.get_member",
+    "POST /api/method/library_manag.api.update_member": "library_manag.api.update_member",
+    "POST /api/method/library_manag.api.delete_member": "library_manag.api.delete_member",
+    "POST /api/method/library_manag.api.create_loan": "library_manag.api.create_loan",
+    "GET /api/method/library_manag.api.get_loan": "library_manag.api.get_loan",
+    # "POST /api/method/library_manag.api.update_loan": "library_manag.api.update_loan",
+    # "POST /api/method/library_manag.api.delete_loan": "library_manag.api.delete_loan"
+}
